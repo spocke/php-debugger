@@ -1,0 +1,172 @@
+@php-debugger-highlight-color: rgba(255, 64, 64, 0.3);
+
+#phpdebugger-panel {
+	height: 210px;
+}
+
+#phpdebugger-sidebar-icon {
+	background: url('assets/bug.svg') no-repeat center center;
+	background-size: contain;
+}
+
+#phpdebugger-sidebar-icon.phpdebugger-sidebar-icon-active {
+	background-image: url('assets/bug-active.svg');
+}
+
+.phpdebugger-input {
+	display: flex;
+	flex-direction: row;
+
+	.phpdebugger-input-indicator {
+		font-weight: bold;
+		margin: 0 3px 0 3px;
+	}
+}
+
+.phpdebugger-input div[contenteditable] {
+	flex: 1;
+	padding-bottom: 5px;
+
+	&:focus {
+		outline: 0;
+	}
+}
+
+.phpdebugger-log {
+	-webkit-user-select: text;
+	margin: 0;
+}
+
+// Overrides for the editor view
+#editor-holder.php-debugger {
+	.php-debugger-highlight-background {
+		background: @php-debugger-highlight-color;
+	}
+
+	.CodeMirror-activeline .CodeMirror-gutter-elt {
+		background: transparent;
+	}
+
+	.php-debugger-bp-gutter {
+		color: @php-debugger-highlight-color;
+		width: 1em;
+		margin-left: 3px;
+		display: inline-block;
+	}
+
+	// Had to override this to render gutter markers properly
+	.CodeMirror-linenumber {
+		min-width: 1em;
+		padding: 0 15px 0 6px;
+	}
+}
+
+#editor-holder .php-debugger-bp-gutter {
+	display: none;
+}
+
+#phpdebugger-content {
+	display: flex;
+
+	.phpdebugger-console {
+		flex: 1;
+		overflow: auto;
+	}
+
+	.phpdebugger-panel {
+		flex: 0.5;
+		overflow: auto;
+		height: 100%;
+
+		h4 {
+			font-size: 13px;
+			border: 1px solid rgba(128, 128, 128, 0.5);
+			border-width: 1px 0 1px 0;
+			background: rgba(0, 0, 0, 0.2);
+			font-weight: bold;
+			margin: 0;
+		}
+
+		h4:nth-child(1) {
+			border-top: 0;
+		}
+
+		.phpdebugger-line {
+			padding: 3px;
+		}
+
+		.phpdebugger-line:nth-child(even) {
+			background: rgba(64, 64, 64, 0.8);
+		}
+
+		.phpdebugger-line-active {
+			font-weight: bold;
+		}
+
+		.phpdebugger-line-active:before {
+			content: "> "
+		}
+	}
+}
+
+.phpdebugger-collapsed {
+	.phpdebugger-arrow {
+		-webkit-transform: rotate(-90deg);
+		transform: rotate(-90deg);
+	}
+
+	div {
+		display: none;
+	}
+}
+
+.phpdebugger-msg {
+	text-align: center;
+	font-style: italic;
+	opacity: 0.5;
+	padding: 3px;
+	background: transparent;
+}
+
+#phpdebugger-content {
+	.tree-view {
+		overflow-y: hidden;
+		cursor: pointer;
+		margin-left: 15px;
+	}
+
+	.tree-has-children {
+		margin-left: 0;
+	}
+
+	.tree-view-children {
+		margin-left: 10px;
+	}
+
+	.tree-view-collapsed > .tree-view-children {
+		height: 0;
+	}
+
+	.tree-view-arrow, .phpdebugger-arrow {
+		display: inline-block;
+		-webkit-user-select: none;
+		user-select: none;
+		-webkit-transition: all 0.1s;
+		transition: all 0.1s;
+		width: 15px;
+		height: 15px;
+		text-align: center;
+	}
+
+	.tree-view-collapsed .tree-text .tree-view-arrow, .phpdebugger-arrow-collapsed {
+		-webkit-transform: rotate(-90deg);
+		-moz-transform: rotate(-90deg);
+		-ms-transform: rotate(-90deg);
+		transform: rotate(-90deg);
+	}
+
+	.phpdebugger-breakpoint-remove {
+		display: inline-block;
+		padding-right: 3px;
+	}
+}

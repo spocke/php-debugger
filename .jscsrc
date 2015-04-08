@@ -1,0 +1,18 @@
+{
+	"preset": "google",
+
+	"requireParenthesesAroundIIFE": true,
+	"validateIndentation": "\t",
+	"disallowKeywords": ["with"],
+	"validateQuoteMarks": null,
+	"requireLineFeedAtFileEnd": null,
+	"disallowImplicitTypeConversion": null,
+	"validateJSDoc": null,
+	"requireCamelCaseOrUpperCaseIdentifiers": null,
+	"disallowMultipleVarDecl": null,
+	"maximumLineLength": 255,
+
+	"excludeFiles": [
+		"node_modules/**"
+	]
+}

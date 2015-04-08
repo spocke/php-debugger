@@ -1,0 +1,56 @@
+<div id="phpdebugger-panel" class="bottom-panel vert-resizable top-resizer">
+	<div class="toolbar simple-toolbar-layout">
+		<span class="title">PHP Debugger</span>
+		<div class="dropdown btn-group">
+			<button type="button" class="btn small" data-phpdebugger-cmd="step_into" disabled>Step into</button>
+			<button type="button" class="btn small" data-phpdebugger-cmd="step_over" disabled>Step over</button>
+			<button type="button" class="btn small" data-phpdebugger-cmd="step_out" disabled>Step out</button>
+			<button type="button" class="btn small" data-phpdebugger-cmd="run" disabled>Run</button>
+			<button type="button" class="btn small" data-phpdebugger-cmd="stop" disabled>Stop</button>
+		</div>
+		<a href="#" class="close" data-phpdebugger-cmd="close">&times;</a>
+	</div>
+
+	<div id="phpdebugger-content" class="resizable-content">
+		<div class="phpdebugger-console">
+			<table class="phpdebugger-log table table-striped table-condensed">
+				<tbody></tbody>
+			</table>
+
+			<div class="phpdebugger-input left-panel">
+				<div class="phpdebugger-input-indicator"> &gt; </div>
+				<div contenteditable="plaintext-only" spellcheck="false"></div>
+			</div>
+		</div>
+
+		<div class="phpdebugger-panel panel">
+			<div class="phpdebugger-stack">
+				<h4><div class="phpdebugger-arrow">▾</div>Call stack</h4>
+				<div class="phpdebugger-content">
+					<div class="phpdebugger-msg">Not paused</div>
+				</div>
+			</div>
+
+			<div class="phpdebugger-locals">
+				<h4><div class="phpdebugger-arrow">▾</div>Locals</h4>
+				<div class="phpdebugger-content">
+					<div class="phpdebugger-msg">Not paused</div>
+				</div>
+			</div>
+
+			<div class="phpdebugger-globals">
+				<h4><div class="phpdebugger-arrow">▾</div>Super globals</h4>
+				<div class="phpdebugger-content">
+					<div class="phpdebugger-msg">Not paused</div>
+				</div>
+			</div>
+
+			<div class="phpdebugger-breakpoints">
+				<h4><div class="phpdebugger-arrow">▾</div>Breakpoints</h4>
+				<div class="phpdebugger-content">
+					<div class="phpdebugger-msg">No breakpoints</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
