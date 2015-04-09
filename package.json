@@ -6,6 +6,7 @@
 	"description": "Enables full PHP Debugging using xdebug in Brackets.",
 	"author": "Johan Sörlin",
 	"license": "MIT",
+	"keywords": ["php", "debugger", "debugging"],
 	"engines": {
 		"brackets": ">=1.1.0"
 	},
