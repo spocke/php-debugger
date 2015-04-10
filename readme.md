@@ -52,8 +52,5 @@ Enables you go get more verbose debugging output.
 
 ## Screenshots
 
-![default](screenshots/screenshot1.jpg)  
-*Default view no active debugging session*
-
-![active](screenshots/screenshot2.jpg)  
+![active](screenshots/screenshot1.jpg)
 *Active debugging session showing local variables and some code evaluation*
