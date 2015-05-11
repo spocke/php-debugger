@@ -41,7 +41,7 @@ Enables you to change the default to something custom.
 ##### php-debugger.idekey
 Enables you to change the default idekey to something custom.
 ```json
-"php-debugger.port": "xdebug"
+"php-debugger.idekey": "xdebug"
 ```
 
 ##### php-debugger.debug
