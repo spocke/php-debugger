@@ -1,6 +1,6 @@
 {
 	"name": "php-debugger",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"title": "PHP Debugger",
 	"homepage": "https://github.com/spocke/php-debugger",
 	"description": "Enables full PHP Debugging using xdebug in Brackets.",
