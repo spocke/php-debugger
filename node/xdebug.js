@@ -72,7 +72,7 @@ function Server() {
 				self.emit("connect", session);
 			});
 
-			server.listen(args[0], "localhost");
+			server.listen(args[0]);
 		}
 
 		callback(null, null);
