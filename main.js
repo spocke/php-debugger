@@ -9,6 +9,7 @@ define(function(require, exports, module) {
 		commands = require('./lib/commands'),
 		tree = require('./lib/tree'),
 		editor = require('./lib/editor'),
+		utils = require('./lib/util'),
 		Menus = brackets.getModule("command/Menus"),
 		AppInit = brackets.getModule("utils/AppInit"),
 		CommandManager = brackets.getModule("command/CommandManager"),
@@ -88,6 +89,9 @@ define(function(require, exports, module) {
 		commands.init();
 		tree.init();
 		editor.init();
+		utils.init({
+			pathMap: prefs.get('pathMap') || {}
+		});
 	}
 
 	function bindEvents() {
